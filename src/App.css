@@ -1,0 +1,15 @@
+:root {
+    --success: #0f0;
+    --danger: #dc3545;
+}
+
+*{
+    box-sizing: border-box;
+    border: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
