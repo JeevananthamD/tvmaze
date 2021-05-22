@@ -2,25 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
 
-const Card = ({rawdata, id}) => {
-    let data = undefined;
+const Card = ({data}) => {
     let img_src = undefined;
     let summary = "";
-    let search_by = "";
-    let rating = "";
-    if(rawdata.show) {
-        data = rawdata.show
-        search_by = "shows";
-        rating = data.rating.average;
-    }
-    else if(rawdata.person) {
-        data = rawdata.person
-        search_by = "people_shows";
-    }
-    else {
-        data = rawdata._embedded.show;
-        search_by = "shows";
-    }
+    let rating = data.rating.average;
     try {
         summary = data.summary
         summary = summary.replace(/(<p>|<\/p>|<b>|<\/b>|<i>|<\/i>)/g,"").substr(0,70) + ".....";
@@ -33,8 +18,9 @@ const Card = ({rawdata, id}) => {
     } catch (error) {
         img_src = "https://st4.depositphotos.com/14953852/24787/v/600/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg";
     }
+    
     return(
-        <Link to={`/${search_by}/${id}`}>
+        <Link to={`/${data.id}`}>
             <button style={{padding: "0", borderRadius: "10px"}}>
                 <div className="card cardContainer" style={{backgroundImage: `url(${img_src})`}}>
                     <div className="card-body cardBody">
