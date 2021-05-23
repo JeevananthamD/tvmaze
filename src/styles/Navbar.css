@@ -5,6 +5,7 @@
     position: sticky;
     top: 0;
     z-index: 1;
+    box-shadow: 0 0 15px var(--success);
 }
 
 .logo {
@@ -52,7 +53,7 @@ input[type="radio"] {
 
 input[type="radio"]:checked + label {
     background-color: var(--success);
-    color: white;
+    color: black;
 }
 
 #searchWrap {

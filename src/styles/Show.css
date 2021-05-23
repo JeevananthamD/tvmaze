@@ -1,0 +1,12 @@
+.nav-pills .nav-link.active {
+    background-color: var(--success);
+    color: black;
+}
+
+.nav-pills .nav-link {
+    border: 1px solid var(--success);
+    margin: 1rem 1rem 0;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+}

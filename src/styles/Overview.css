@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+#overview {
+    color: white;
+    padding: 0 auto;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.ov-wrap {
+    display: flex;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.ov-imageContainer {
+    width: fit-content;
+    padding: 0;
+    margin: 0 20px 0 0;
+}
+
+.ov-image {
+    width: 288px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.ov-textarea {
+    position: relative;
+    width: 100%;
+}
+
+.genres {
+    border: 1px solid black;
+    margin: 3px;
+    padding: 3px;
+    border-radius: 10px;
+    background-color: var(--success);
+    color: black;
+}
+
+.link {
+    text-decoration: none;
+}

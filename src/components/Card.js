@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
 
 const Card = ({data}) => {
+
     let img_src = undefined;
     let summary = "";
     let rating = data.rating.average;
+
     try {
         summary = data.summary
-        summary = summary.replace(/(<p>|<\/p>|<b>|<\/b>|<i>|<\/i>)/g,"").substr(0,70) + ".....";
+        summary = summary.replace(/(<p>|<\/p>|<b>|<\/b>|<i>|<\/i>|<br \/>)/g,"").substr(0,70) + ".....";
     } catch (error) {
         summary = "";
     }
@@ -20,7 +22,7 @@ const Card = ({data}) => {
     }
     
     return(
-        <Link to={`/${data.id}`}>
+        <Link to={`/show/${data.id}`}>
             <button style={{padding: "0", borderRadius: "10px"}}>
                 <div className="card cardContainer" style={{backgroundImage: `url(${img_src})`}}>
                     <div className="card-body cardBody">
@@ -31,6 +33,7 @@ const Card = ({data}) => {
             </button>
         </Link>
     );
+    
 }
 
 export default Card;
