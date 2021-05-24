@@ -1,4 +1,5 @@
 import React from 'react'
+import EpisodeCardList from './EpisodeCardList';
 
 const Episode = ({seasonNo,episodesData}) => {
 
@@ -10,7 +11,7 @@ const Episode = ({seasonNo,episodesData}) => {
 
     return (
         <div>
-            
+            <EpisodeCardList episodes={season_episodes}/>
         </div>
     )
 }
