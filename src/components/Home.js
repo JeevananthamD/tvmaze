@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import CardList from './CardList';
+import ShowCardList from './ShowCardList';
 
 
 const Home = (props) => {
@@ -52,7 +52,7 @@ const Home = (props) => {
     return (
         <div className="container" id="cardContainer">
             {/* {console.log(data)} */}
-            {(data)?<CardList data={data}/>:""}
+            {(data)?<ShowCardList data={data}/>:""}
             {(data!==undefined && !data.length)?<p className="text-center mt-5 fs-1 fw-bold" style={{color: "white"}}>No Result Found</p>:""}
         </div>
     );

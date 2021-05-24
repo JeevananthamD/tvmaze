@@ -7,7 +7,7 @@ const Overview = ({data}) => {
 
     let img_src = "";
     let summary = "";
-    let genres = undefined;
+    let genres = data.genres;
 
     try {
         img_src = data.image.original;
@@ -18,7 +18,6 @@ const Overview = ({data}) => {
     try {
         summary = data.summary
         summary = summary.replace(/(<p>|<\/p>|<b>|<\/b>|<i>|<\/i>|<br \/>)/g,"");
-        genres = data.genres;
     } catch (error) {
         summary = "";
     }
@@ -26,14 +25,14 @@ const Overview = ({data}) => {
     return (
         <div className="container" id="overview">
             {(data)?
-            <div className="ov-wrap row">{console.log(data.officialSite)}
-                <div className="ov-imageContainer align-self-start col-4 mb-3">
+            <div className="ov-wrap row">
+                <div className="ov-imageContainer align-self-start col-md-6 col-lg-4">
                     <img src={img_src} className="ov-image"/>
                 </div>
-                <div className="ov-textarea col">
+                <div className="ov-textarea col" id="ov-textarea">
                     <div className="d-flex align-self-center" style={{position: "absolute", right: "10px"}}><AiFillStar size="1.8rem" color="yellow"/> <span className="ps-2 fs-5">{data.rating.average}</span></div>
                     <div className="fw-bold fs-3 mb-2">{data.name}</div>
-                    <div className="d-flex d-{inline-block}">{genres.map(i => <p className="genres mb-2 p-1" style={{fontSize: "14px"}}>{i}</p>)}</div>
+                    <div className="d-flex d-{inline-block}">{genres.map((i,j) => <p className="genres mb-2 p-1" style={{fontSize: "14px"}}>{i}</p>)}</div>
                     <p>{summary}</p>
                     <div className="d-flex row m-0"><p className="col-6 p-0">Language</p> <p className="col-6 p-0">{(data.language)?data.language:"NA"}</p></div>
                     <div className="d-flex row m-0"><p className="col-6 p-0">Premiered</p> <p className="col-6 p-0">{(data.premiered)?data.premiered:"NA"}</p></div>

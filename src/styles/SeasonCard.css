@@ -1,0 +1,53 @@
+
+.seasonImg {
+    width: 210px;
+    height: 295px;
+    border-radius: 5px;
+}
+
+.seasonCard {
+    position: relative;
+    cursor: pointer;
+    transition: 300ms ease;
+    box-shadow: 0px 2px 2px var(--success);
+    border-radius: 5px;
+}
+
+.seasonCard:hover {
+    transform: scale(1.05);
+}
+
+.seasonCard:active {
+    transform: scale(0.989);
+}
+
+.seasonNo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--success);
+    font-weight: 600;
+}
+
+#seasoncardlist {
+    column-gap: 20px;
+    row-gap: 20px;
+    animation: season-card-load 300ms ease-out;
+}
+
+@keyframes season-card-load {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}

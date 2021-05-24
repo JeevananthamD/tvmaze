@@ -1,7 +1,7 @@
 #cardList {
     column-gap: 20px;
     row-gap: 20px;
-    animation: card-load 300ms ease-out;
+    animation: show-card-load 300ms ease-out;
 }
 
 .cardContainer {
@@ -12,10 +12,18 @@
     width: 210px;
     background-size: contain;
     background-repeat: no-repeat;
-    box-shadow: 2px 2px 2px var(--success);
+    box-shadow: 0px 2px 2px var(--success);
     padding: 10rem 0 0 0;
     overflow: hidden;
     transition: 300ms ease;
+}
+
+.cardContainer:hover {
+    transform: scale(1.05);
+}
+
+.cardContainer:active {
+    transform: scale(0.989);
 }
 
 .cardBody {
@@ -27,19 +35,11 @@
     transition: 300ms;
 }
 
-.cardContainer:hover {
-    transform: scale(1.05);
-}
-
 .cardContainer:hover .cardBody{
     transform: translateY(0);
 }
 
-.cardContainer:active {
-    transform: scale(0.989);
-}
-
-@keyframes card-load {
+@keyframes show-card-load {
     0% {
         transform: translateY(100%);
     }

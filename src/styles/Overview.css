@@ -6,9 +6,6 @@
     color: white;
     padding: 0 auto;
     margin: 2rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-weight: 600;
 }
 
@@ -20,12 +17,6 @@
     backdrop-filter: blur(10px);
 }
 
-.ov-imageContainer {
-    width: fit-content;
-    padding: 0;
-    margin: 0 20px 0 0;
-}
-
 .ov-image {
     width: 288px;
     height: auto;
@@ -35,7 +26,6 @@
 
 .ov-textarea {
     position: relative;
-    width: 100%;
 }
 
 .genres {
@@ -49,4 +39,10 @@
 
 .link {
     text-decoration: none;
+}
+
+@media (min-width: 529px) and (max-width: 767px) {
+    #ov-textarea {
+        width: 100%;
+    }
 }
