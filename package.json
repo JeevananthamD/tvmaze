@@ -7,7 +7,6 @@
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "gh-pages": "^3.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
@@ -21,7 +20,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "watch": "webpack-dev-server --progress"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +40,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "bable-loader": "0.0.1-security",
+    "gh-pages": "^3.2.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.1"
   }
 }
