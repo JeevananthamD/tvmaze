@@ -37,15 +37,14 @@ class App extends Component {
         <Navbar onChange={this.onChange} searchBy={this.searchBy}/>
         <BgAnimation/>
         <Switch>
-          <Route exact path="/tvmaze/home"><Home searchInput={this.state.searchInput} searchBy={this.state.searchBy}/></Route>
+          <Route exact path="/tvmaze"><Home searchInput={this.state.searchInput} searchBy={this.state.searchBy}/></Route>
           <Route exact path="/tvmaze/show/:id" render={({match}) => {
             return <Show id={match.params.id} getEpisodes={this.getEpisodes}/>
           }}/>
-          <Route exact path={`/tvmaze/show/season/:seasonNo`} render={({match}) => {
+          <Route exact path="/tvmaze/show/season/:seasonNo" render={({match}) => {
             return <Episode seasonNo={match.params.seasonNo} episodesData={this.state.episodes}/>
           }}/>
-          <Redirect from="/tvmaze" exact to="/tvmaze/home"/>
-          <Redirect from="/" exact to="/tvmaze/home"/>
+          <Redirect from="/" exact to="/tvmaze"/>
         </Switch>
       </div>
     );

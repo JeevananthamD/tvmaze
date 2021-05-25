@@ -17,7 +17,7 @@ const Navbar = ({onChange, searchBy}) => {
         <nav className="navbar navbar-dark" id="navBar">
             <div className="container-fluid">
 
-                <Link to="/tvmaze/home" className="navbar-brand logo"><span><FiMonitor size="2.5em"/></span> <span id="name">TVmaze</span></Link>
+                <Link to="/tvmaze" className="navbar-brand logo"><span><FiMonitor size="2.5em"/></span> <span id="name">TVmaze</span></Link>
                 
                 <div className="buttonWrap">
                     <input  type="radio" name="searchBy" id="people" onClick={searchBy}/>
