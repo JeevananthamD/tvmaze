@@ -1,9 +1,11 @@
 import React from 'react'
+import CastCardList from './CastCardList'
 
-const Cast = () => {
+const Cast = ({data}) => {
+
     return (
-        <div id="cast">
-            Cast
+        <div className="cast">
+            <CastCardList casts={data}/>
         </div>
     )
 }

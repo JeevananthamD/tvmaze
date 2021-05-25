@@ -12,7 +12,6 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    // this.episodes = undefined;
     this.state = {
       searchInput: undefined,
       searchBy: "shows",

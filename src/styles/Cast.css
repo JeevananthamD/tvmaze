@@ -1,0 +1,9 @@
+
+#castCardList{
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.castcard {
+    border: 2px solid var(--success);
+}

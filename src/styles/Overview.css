@@ -7,6 +7,7 @@
     padding: 0 auto;
     margin: 2rem auto;
     font-weight: 600;
+    animation: overview-load 400ms ease-out;
 }
 
 .ov-wrap {
@@ -44,5 +45,14 @@
 @media (min-width: 529px) and (max-width: 767px) {
     #ov-textarea {
         width: 100%;
+    }
+}
+
+@keyframes overview-load {
+    0% {
+        transform: translatex(100%);
+    }
+    100% {
+        transform: translatex(0%);
     }
 }

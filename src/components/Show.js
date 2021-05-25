@@ -4,6 +4,7 @@ import Seasons from './Seasons';
 import Overview from './Overview';
 import { NavLink, Redirect, Route, Switch } from 'react-router-dom';
 import "../styles/Show.css";
+import LodingAnimation from './LodingAnimation';
 
 const Show = ({id,getEpisodes}) => {
    
@@ -30,7 +31,7 @@ const Show = ({id,getEpisodes}) => {
     },[data]);
 
     return (
-        <div>
+        <div> 
             <ul className="nav nav-pills">
                 <li className="nav-item">
                     <a className="nav-link active" aria-current="page" href="#Overview" data-bs-toggle="tab">Overview</a>
@@ -44,15 +45,16 @@ const Show = ({id,getEpisodes}) => {
             </ul>
             <div className="tab-content">
                 <div className="tab-pane active" id="Overview">
-                    {(data.show)?<Overview data={data.show} key={id}/>:""}
+                    {(data.show)?<Overview data={data.show}/>:""}
                 </div>
                 <div className="tab-pane" id="Seasons">
                     {(data.show && data.seasons)?<Seasons seasonData={data.seasons} id={id}/>:""}
                 </div>
                 <div className="tab-pane" id="Cast">
-                    <Cast/>
-                </div>                
+                    {(data.show)?<Cast data={data.show._embedded.cast}/>:""}
+                </div>               
             </div>
+            {(data)?"":<LodingAnimation/>}
         </div>
     )
 }

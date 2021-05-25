@@ -24,7 +24,7 @@ const EpisodeCard = ({data}) => {
             <h4 className="fw-bold">{data.name}</h4>
             <div><span className="me-2">Air date:</span>{data.airdate}</div>
             <div><span className="me-1">Episode: </span>{data.number}</div>
-            <div><span className="me-1">Runtime:</span>{data.runtime}</div>
+            <div><span className="me-1">Runtime:</span>{data.runtime} min</div>
             <div>{summary}</div>
         </div>
     )

@@ -51,7 +51,6 @@ const Home = (props) => {
 
     return (
         <div className="container" id="cardContainer">
-            {/* {console.log(data)} */}
             {(data)?<ShowCardList data={data}/>:""}
             {(data!==undefined && !data.length)?<p className="text-center mt-5 fs-1 fw-bold" style={{color: "white"}}>No Result Found</p>:""}
         </div>

@@ -1,6 +1,8 @@
 import React from 'react'
 import "../styles/Overview.css"
 import { AiFillStar } from "react-icons/ai";
+import Genres from "./Genres"
+import LodingAnimation from './LodingAnimation';
 
 
 const Overview = ({data}) => {
@@ -24,7 +26,6 @@ const Overview = ({data}) => {
 
     return (
         <div className="container" id="overview">
-            {(data)?
             <div className="ov-wrap row">
                 <div className="ov-imageContainer align-self-start col-md-6 col-lg-4">
                     <img src={img_src} className="ov-image"/>
@@ -32,7 +33,7 @@ const Overview = ({data}) => {
                 <div className="ov-textarea col" id="ov-textarea">
                     <div className="d-flex align-self-center" style={{position: "absolute", right: "10px"}}><AiFillStar size="1.8rem" color="yellow"/> <span className="ps-2 fs-5">{data.rating.average}</span></div>
                     <div className="fw-bold fs-3 mb-2">{data.name}</div>
-                    <div className="d-flex d-{inline-block}">{genres.map((i,j) => <p className="genres mb-2 p-1" style={{fontSize: "14px"}}>{i}</p>)}</div>
+                    <div className="d-flex d-{inline-block}">{genres.map((i,j) => <Genres i={i} key={j}/>)}</div>
                     <p>{summary}</p>
                     <div className="d-flex row m-0"><p className="col-6 p-0">Language</p> <p className="col-6 p-0">{(data.language)?data.language:"NA"}</p></div>
                     <div className="d-flex row m-0"><p className="col-6 p-0">Premiered</p> <p className="col-6 p-0">{(data.premiered)?data.premiered:"NA"}</p></div>
@@ -40,7 +41,6 @@ const Overview = ({data}) => {
                     <div className="d-flex row m-0"><p className="col-6 p-0">Official Site</p> {(data.officialSite)?<a href={`${data.officialSite}`} target="_blank" className="col-6 p-0 link">Link</a>:"NA"}</div>
                 </div>
             </div>
-            :""}
         </div>
     )
 
