@@ -5,17 +5,17 @@
     "main.js.map": "/tvmaze/static/js/main.471c7a86.chunk.js.map",
     "runtime-main.js": "/tvmaze/static/js/runtime-main.a28e3f58.js",
     "runtime-main.js.map": "/tvmaze/static/js/runtime-main.a28e3f58.js.map",
-    "static/js/2.75cbc61f.chunk.js": "/tvmaze/static/js/2.75cbc61f.chunk.js",
-    "static/js/2.75cbc61f.chunk.js.map": "/tvmaze/static/js/2.75cbc61f.chunk.js.map",
+    "static/js/2.5ae5c0e2.chunk.js": "/tvmaze/static/js/2.5ae5c0e2.chunk.js",
+    "static/js/2.5ae5c0e2.chunk.js.map": "/tvmaze/static/js/2.5ae5c0e2.chunk.js.map",
     "static/js/3.e5920cda.chunk.js": "/tvmaze/static/js/3.e5920cda.chunk.js",
     "static/js/3.e5920cda.chunk.js.map": "/tvmaze/static/js/3.e5920cda.chunk.js.map",
     "index.html": "/tvmaze/index.html",
     "static/css/main.27a52fa3.chunk.css.map": "/tvmaze/static/css/main.27a52fa3.chunk.css.map",
-    "static/js/2.75cbc61f.chunk.js.LICENSE.txt": "/tvmaze/static/js/2.75cbc61f.chunk.js.LICENSE.txt"
+    "static/js/2.5ae5c0e2.chunk.js.LICENSE.txt": "/tvmaze/static/js/2.5ae5c0e2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a28e3f58.js",
-    "static/js/2.75cbc61f.chunk.js",
+    "static/js/2.5ae5c0e2.chunk.js",
     "static/css/main.27a52fa3.chunk.css",
     "static/js/main.471c7a86.chunk.js"
   ]
