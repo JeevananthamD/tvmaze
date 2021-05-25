@@ -14,7 +14,7 @@ const SeasonCard = ({data}) => {
     }
 
     return (
-        <Link to={`/show/season/${data.number}`}>
+        <Link to={`/tvmaze/show/season/${data.number}`}>
             <div className="seasonCard">
                 <img src={img_src} className="seasonImg"/>
                 <p className="seasonNo">S{data.number}</p>

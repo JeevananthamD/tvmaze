@@ -22,7 +22,7 @@ const Card = ({data}) => {
     }
     
     return(
-        <Link to={`/show/${data.id}`}>
+        <Link to={`/tvmaze/show/${data.id}`}>
             <button style={{padding: "0", borderRadius: "10px"}}>
                 <div className="card cardContainer" style={{backgroundImage: `url(${img_src})`}}>
                     <div className="card-body cardBody">
