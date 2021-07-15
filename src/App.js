@@ -17,10 +17,14 @@ class App extends Component {
       searchBy: "shows",
       episodes: undefined
     }
+    this.interval = null;
   }
 
   onChange = (e) => {
-    this.setState({searchInput: e.target.value});
+    clearInterval(this.interval);
+    setTimeout(() => {
+      this.setState({searchInput: e.target.value});
+    }, 1000)
   }
 
   searchBy = e => {
